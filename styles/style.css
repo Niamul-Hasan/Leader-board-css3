@@ -10,6 +10,23 @@ main{
     align-items: center;
     flex-direction: column;
 }
+/* header{
+    margin: 0px;
+}
+.navigation{
+    width: 100%;
+    background-color: cadetblue;
+    position: fixed;
+    margin: 0px;
+}
+.navigation li{
+    list-style: none;
+    color: black;
+    font-size: 1.2em;
+    display: inline;
+} */
+
+
 .container{
     background-color: #FFFFFF;
     padding: 30px;
@@ -120,4 +137,32 @@ a{
 }
 .blog{
     overflow: hidden;
+}
+
+
+/* responsive design */
+
+@media only screen and (max-width:393px) {
+    .container{
+        width: 100%;
+    }
+    .players,.courses,.top-blogs{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .player,.blogs{
+        flex-direction: column;
+    }
+}
+
+@media only screen and (min-width:394px) and (max-width:820px) {
+
+    .container{
+        width: 100%;
+    }
+    .players,.courses{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .top-blogs{
+        grid-template-columns: repeat(1,1fr);
+    }
 }
